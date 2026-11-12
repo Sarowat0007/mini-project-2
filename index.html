@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Khanapina celebrates the authentic taste of Bengali cuisine with traditional Bengali thali, fish, rice, bhorta and more.">
+  <meta name="theme-color" content="#183b2b">
+  <title>Khanapina | The Taste of Bengal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { leaf: '#183b2b', leaf2: '#28583d', cream: '#fff8e9', turmeric: '#d99a27', ink: '#2b2118' },
+        fontFamily: { display: ['Georgia', 'serif'], sans: ['Arial', 'sans-serif'] }
+      }}
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background:#fff8e9; color:#2b2118; }
+    .hero { background:linear-gradient(90deg,rgba(10,20,13,.83),rgba(10,20,13,.34)),url('images/hero-bengali-thali.jpg') center/cover no-repeat; }
+    .food-card img { transition:transform .45s ease; }
+    .food-card:hover img { transform:scale(1.055); }
+    .food-card { transition:transform .25s ease, box-shadow .25s ease; }
+    .food-card:hover { transform:translateY(-5px); box-shadow:0 18px 35px rgba(24,59,43,.14); }
+    .nav-link { position:relative; }
+    .nav-link:after { content:''; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:#d99a27; transition:width .25s; }
+    .nav-link:hover:after, .nav-link:focus-visible:after { width:100%; }
+    .focus-ring:focus-visible { outline:3px solid #d99a27; outline-offset:3px; }
+    @media (prefers-reduced-motion: reduce) { html{scroll-behavior:auto} *,*::before,*::after{transition:none!important;animation:none!important} }
+  </style>
+</head>
+<body class="font-sans">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to content</a>
+
+  <header class="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-leaf/10">
+    <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between" aria-label="Main navigation">
+      <a href="#home" class="focus-ring flex items-center gap-3 rounded-lg" aria-label="Khanapina home">
+        <span class="w-11 h-11 rounded-full bg-leaf text-turmeric flex items-center justify-center text-2xl">✿</span>
+        <span><span class="block font-display text-2xl font-bold tracking-wide text-leaf">KHANAPINA</span><span class="block text-[10px] tracking-[.25em] uppercase text-stone-600">The Taste of Bengal</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-leaf">
+        <a class="nav-link focus-ring" href="#home">Home</a>
+        <a class="nav-link focus-ring" href="#thali">Bengali Thali</a>
+        <a class="nav-link focus-ring" href="#about">Our Story</a>
+        <a class="nav-link focus-ring" href="#contact">Contact</a>
+        <a href="#thali" class="focus-ring rounded-full bg-turmeric px-5 py-3 text-leaf hover:bg-amber-500 transition">Explore Menu</a>
+      </div>
+      <button id="menuButton" class="md:hidden focus-ring rounded-lg border border-leaf/20 p-3 text-leaf" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-leaf/10 bg-cream px-5 py-4">
+      <div class="flex flex-col gap-4 font-semibold text-leaf">
+        <a href="#home">Home</a><a href="#thali">Bengali Thali</a><a href="#about">Our Story</a><a href="#contact">Contact</a>
+        <a href="#thali" class="inline-block w-fit rounded-full bg-turmeric px-5 py-3">Explore Menu</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero min-h-[620px] md:min-h-[690px] flex items-center text-white">
+      <div class="max-w-7xl mx-auto w-full px-6 lg:px-8 py-24">
+        <div class="max-w-2xl">
+          <p class="text-turmeric font-bold tracking-[.25em] uppercase text-xs md:text-sm mb-5">ঐতিহ্যের স্বাদ · বাঙালির ভালোবাসা</p>
+          <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.06] font-bold mb-6">A Taste of <span class="text-amber-300">Bengal.</span></h1>
+          <p class="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl mb-9">Discover the warmth of Bengali food traditions with comforting rice, flavorful fish, homestyle curries and a table full of memories.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#thali" class="focus-ring rounded-full bg-turmeric text-leaf font-bold px-7 py-4 hover:bg-amber-400 transition">Explore Our Thali <span aria-hidden="true">→</span></a>
+            <a href="#about" class="focus-ring rounded-full border border-white/70 px-7 py-4 font-semibold hover:bg-white hover:text-leaf transition">Our Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="text-turmeric font-bold uppercase tracking-[.2em] text-xs mb-3">স্বাদের ঐতিহ্য</p>
+        <h2 class="font-display text-3xl md:text-4xl text-leaf font-bold mb-5">Every Thali Tells a Bengali Story</h2>
+        <p class="text-stone-600 leading-8 max-w-3xl mx-auto">At Khanapina, we celebrate the variety and comfort of Bengali cuisine. From fragrant rice and seasonal vegetables to fish curries and traditional sides, every plate brings together the flavors we know and love.</p>
+      </div>
+    </section>
+
+    <section id="thali" class="py-20 md:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <p class="text-turmeric font-bold uppercase tracking-[.2em] text-xs mb-3">Our signature collection</p>
+          <h2 class="font-display text-4xl md:text-5xl text-leaf font-bold mb-4">The Bengali Thali</h2>
+          <p class="text-stone-600 max-w-2xl mx-auto">A generous spread of traditional flavors, served with care.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          <article class="food-card bg-white rounded-2xl overflow-hidden shadow-md">
+            <div class="overflow-hidden h-64"><img src="images/bengali-thali-1.jpg" alt="Bengali meal with rice, fish, vegetables and traditional sides" class="w-full h-full object-cover" loading="lazy"></div>
+            <div class="p-6"><span class="text-xs font-bold uppercase tracking-widest text-turmeric">Signature platter</span><h3 class="font-display text-2xl font-bold text-leaf mt-2 mb-2">Traditional Bengali Thali</h3><p class="text-stone-600 text-sm leading-6">A colorful spread inspired by the everyday Bengali meal, with rice, fish and classic accompaniments.</p></div>
+          </article>
+          <article class="food-card bg-white rounded-2xl overflow-hidden shadow-md">
+            <div class="overflow-hidden h-64"><img src="images/bengali-thali-2.jpg" alt="Traditional Bengali rice meal served with several curries and sides" class="w-full h-full object-cover" loading="lazy"></div>
+            <div class="p-6"><span class="text-xs font-bold uppercase tracking-widest text-turmeric">A hearty meal</span><h3 class="font-display text-2xl font-bold text-leaf mt-2 mb-2">Bengali Feast</h3><p class="text-stone-600 text-sm leading-6">Rice and a selection of rich curries and sides for a satisfying traditional dining experience.</p></div>
+          </article>
+          <article class="food-card bg-white rounded-2xl overflow-hidden shadow-md">
+            <div class="overflow-hidden h-64"><img src="images/bengali-thali-3.jpg" alt="Bengali thali with rice, dal, fried fish and assorted dishes" class="w-full h-full object-cover" loading="lazy"></div>
+            <div class="p-6"><span class="text-xs font-bold uppercase tracking-widest text-turmeric">Classic favorites</span><h3 class="font-display text-2xl font-bold text-leaf mt-2 mb-2">Homestyle Thali</h3><p class="text-stone-600 text-sm leading-6">A comforting combination of rice, dal, savory sides and traditional Bengali flavors.</p></div>
+          </article>
+          <article class="food-card bg-white rounded-2xl overflow-hidden shadow-md">
+            <div class="overflow-hidden h-64"><img src="images/bengali-thali-4.jpg" alt="Bengali fish curry and rice served on a banana leaf" class="w-full h-full object-cover" loading="lazy"></div>
+            <div class="p-6"><span class="text-xs font-bold uppercase tracking-widest text-turmeric">From the river</span><h3 class="font-display text-2xl font-bold text-leaf mt-2 mb-2">Fish & Rice Platter</h3><p class="text-stone-600 text-sm leading-6">A Bengali favorite pairing rice with flavorful fish curry and traditional accompaniments.</p></div>
+          </article>
+          <article class="food-card bg-white rounded-2xl overflow-hidden shadow-md sm:col-span-2 lg:col-span-2">
+            <div class="grid md:grid-cols-2 h-full">
+              <div class="overflow-hidden min-h-64"><img src="images/hero-bengali-thali.jpg" alt="Assorted Bengali dishes including fish, prawns, rice and yogurt" class="w-full h-full object-cover" loading="lazy"></div>
+              <div class="p-7 md:p-9 flex flex-col justify-center"><span class="text-xs font-bold uppercase tracking-widest text-turmeric">Khanapina highlight</span><h3 class="font-display text-2xl md:text-3xl font-bold text-leaf mt-2 mb-3">Special Bengali Spread</h3><p class="text-stone-600 text-sm leading-7">A feast of Bengali-inspired dishes featuring seafood, rice and flavorful accompaniments. A celebration made for sharing.</p></div>
+            </div>
+          </article>
+        </div>
+        <p class="text-center text-xs text-stone-500 mt-8">Menu descriptions are illustrative. Please confirm available dishes and prices with the restaurant.</p>
+      </div>
+    </section>
+
+    <section class="bg-leaf text-white py-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-12"><p class="text-amber-300 uppercase tracking-[.2em] text-xs font-bold mb-3">Why dine with us</p><h2 class="font-display text-4xl md:text-5xl font-bold">Made for the Love of Good Food</h2></div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div class="p-5"><div class="text-4xl mb-4" aria-hidden="true">🌿</div><h3 class="font-display text-xl font-bold mb-2">Fresh Ingredients</h3><p class="text-white/70 text-sm leading-6">A fresh approach to familiar Bengali flavors.</p></div>
+          <div class="p-5"><div class="text-4xl mb-4" aria-hidden="true">🍛</div><h3 class="font-display text-xl font-bold mb-2">Traditional Taste</h3><p class="text-white/70 text-sm leading-6">Inspired by the dishes and food culture of Bengal.</p></div>
+          <div class="p-5"><div class="text-4xl mb-4" aria-hidden="true">🐟</div><h3 class="font-display text-xl font-bold mb-2">Bengali Favorites</h3><p class="text-white/70 text-sm leading-6">Rice, fish, curries and much-loved sides.</p></div>
+          <div class="p-5"><div class="text-4xl mb-4" aria-hidden="true">❤️</div><h3 class="font-display text-xl font-bold mb-2">Warm Hospitality</h3><p class="text-white/70 text-sm leading-6">A welcoming place to enjoy a satisfying meal.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+        <div class="rounded-3xl overflow-hidden shadow-xl"><img src="images/bengali-thali-4.jpg" alt="Traditional Bengali meal arranged on a green banana leaf" class="w-full h-[360px] md:h-[480px] object-cover" loading="lazy"></div>
+        <div><p class="text-turmeric font-bold uppercase tracking-[.2em] text-xs mb-3">A little about us</p><h2 class="font-display text-4xl md:text-5xl text-leaf font-bold mb-6">A Celebration of Bengali Food Culture</h2><p class="text-stone-600 leading-8 mb-5">Khanapina is inspired by the richness of Bengali cuisine and the joy of gathering around a generous meal. Our story is told through familiar ingredients, colorful plates and the timeless comfort of a traditional thali.</p><p class="text-stone-600 leading-8">Come discover a taste of Bengal, one plate at a time.</p><a href="#contact" class="focus-ring inline-block mt-8 rounded-full bg-leaf text-white font-semibold px-7 py-4 hover:bg-leaf2 transition">Get in Touch</a></div>
+      </div>
+    </section>
+
+    <section class="py-16 px-6">
+      <div class="max-w-5xl mx-auto rounded-3xl bg-[#ead7ad] text-center px-6 py-14 md:py-16">
+        <p class="text-leaf/70 font-bold uppercase tracking-[.2em] text-xs mb-3">Come hungry, leave happy</p>
+        <h2 class="font-display text-4xl md:text-5xl text-leaf font-bold mb-4">One Plate. A Thousand Flavors.</h2>
+        <p class="text-leaf/80 max-w-xl mx-auto mb-8">Make room for the taste and tradition of Bengal at Khanapina.</p>
+        <a href="#thali" class="focus-ring inline-block rounded-full bg-leaf text-white px-8 py-4 font-bold hover:bg-leaf2 transition">Discover Our Thali</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="bg-[#10291e] text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-3 gap-10">
+      <div><a href="#home" class="font-display text-3xl font-bold text-amber-300">KHANAPINA</a><p class="text-white/65 mt-4 leading-7 max-w-xs">ঐতিহ্যের স্বাদ, বাঙালির ভালোবাসা।<br>The taste of tradition, the love of Bengal.</p></div>
+      <div><h3 class="font-display text-xl font-bold mb-4">Explore</h3><div class="flex flex-col gap-3 text-white/70 text-sm"><a class="hover:text-amber-300" href="#home">Home</a><a class="hover:text-amber-300" href="#thali">Bengali Thali</a><a class="hover:text-amber-300" href="#about">Our Story</a></div></div>
+      <div><h3 class="font-display text-xl font-bold mb-4">Contact</h3><p class="text-white/70 text-sm leading-7">Restaurant address: To be added<br>Phone: To be added<br>Opening hours: To be added</p><p class="text-amber-300 text-xs mt-3">Add your real contact details before publishing.</p></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-12 pt-6 border-t border-white/15 text-center text-white/50 text-xs">© 2026 KHANAPINA. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation menu');
+    }));
+  </script>
+</body>
+</html>
